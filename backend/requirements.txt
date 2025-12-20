@@ -1,0 +1,33 @@
+# Core Framework
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Web Scraping & Crawling
+beautifulsoup4
+lxml
+requests
+urllib3
+
+# AI & Embeddings
+openai
+
+tiktoken
+
+# Local Models (Optional - for AI_MODE=local)
+sentence-transformers
+transformers
+torch
+accelerate
+
+# Vector Database
+faiss-cpu
+numpy<2.0.0
+
+
+# Data Processing
+pandas
+
+# Utilities
+pydantic
+pydantic-settings

@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #111827;
+  /* Gray 900 */
+  --foreground: #f9fafb;
+  /* Gray 50 */
+
+  /* Roblox Colors */
+  --bloxy-blue: #00A2FF;
+  --bloxy-blue-dark: #0077BC;
+
+  --bloxy-green: #00B06F;
+  --bloxy-green-dark: #008C5E;
+
+  --bloxy-red: #FF3B30;
+  --bloxy-red-dark: #cc2f26;
+
+  --bloxy-yellow: #F5C400;
+  --bloxy-yellow-dark: #C7A000;
+}
+
+body {
+  color: var(--foreground);
+  background: #111827;
+  background-image:
+    radial-gradient(#1f2937 1px, transparent 1px),
+    radial-gradient(#1f2937 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* 3D Pushable Button */
+.btn-bloxy {
+  @apply relative inline-flex items-center justify-center font-bold uppercase tracking-wide transition-all;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transform: translateY(0);
+}
+
+.btn-bloxy:active {
+  transform: translateY(4px);
+  box-shadow: none !important;
+  border-bottom-width: 0px !important;
+  margin-top: 4px;
+  /* Maintain layout */
+}
+
+/* Blue Primary */
+.btn-bloxy-blue {
+  background-color: var(--bloxy-blue);
+  color: white;
+  border-radius: 12px;
+  border-bottom: 6px solid var(--bloxy-blue-dark);
+}
+
+.btn-bloxy-blue:hover {
+  filter: brightness(1.1);
+}
+
+/* Green Success */
+.btn-bloxy-green {
+  background-color: var(--bloxy-green);
+  color: white;
+  border-radius: 12px;
+  border-bottom: 6px solid var(--bloxy-green-dark);
+}
+
+.btn-bloxy-green:hover {
+  filter: brightness(1.1);
+}
+
+/* Red Danger */
+.btn-bloxy-red {
+  background-color: var(--bloxy-red);
+  color: white;
+  border-radius: 12px;
+  border-bottom: 6px solid var(--bloxy-red-dark);
+}
+
+/* Yellow Warning */
+.btn-bloxy-yellow {
+  background-color: var(--bloxy-yellow);
+  color: black;
+  border-radius: 12px;
+  border-bottom: 6px solid var(--bloxy-yellow-dark);
+}
+
+/* Bloxy Card */
+.bloxy-card {
+  @apply bg-gray-800 border-2 border-gray-700 rounded-2xl shadow-xl;
+}
+
+/* Chat Input */
+.bloxy-input {
+  @apply w-full bg-gray-900 border-2 border-gray-700 rounded-xl px-4 py-3 text-white font-medium outline-none transition-all;
+}
+
+.bloxy-input:focus {
+  @apply border-blue-500 bg-gray-800;
+  box-shadow: 0 4px 0 rgba(59, 130, 246, 0.2);
+}
+
+/* Floating Animation */
+@keyframes float-y {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-y {
+  animation: float-y 3s ease-in-out infinite;
+}
