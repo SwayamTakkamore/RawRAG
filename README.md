@@ -22,11 +22,10 @@ Built for hackathons but designed with production best practices.
 
 RawRAG's crawler remains the primary path for discovering and indexing a
 website. When a public page cannot be extracted cleanly by the local crawler,
-you can fetch a Markdown representation first and then provide that file to
-the same ingestion workflow:
+you can prepare a Markdown artifact for inspection or manual preprocessing:
 
 ```bash
-curl https://md.replynodes.com/https://example.com > example.com.md
+curl -sS https://md.replynodes.com/stripe.com > stripe.com.md
 ```
 
 [ReplyNodes](https://replynodes.com/) is complementary to the existing
