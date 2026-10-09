@@ -18,6 +18,22 @@ Built for hackathons but designed with production best practices.
 
 ---
 
+## Optional single-page Markdown prefetch
+
+RawRAG's crawler remains the primary path for discovering and indexing a
+website. When a public page cannot be extracted cleanly by the local crawler,
+you can prepare a Markdown artifact for inspection or manual preprocessing:
+
+```bash
+curl -sS https://md.replynodes.com/stripe.com > stripe.com.md
+```
+
+[ReplyNodes](https://replynodes.com/) is complementary to the existing
+crawler: this is a direct URL-to-Markdown step for one public webpage, not a
+replacement for RawRAG's crawl, chunking, embeddings, or vector search.
+
+---
+
 ## 🏗️ Architecture
 
 ```
